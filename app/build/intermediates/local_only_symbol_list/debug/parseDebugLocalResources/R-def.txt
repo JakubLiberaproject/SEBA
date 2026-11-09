@@ -6,6 +6,7 @@ drawable bg_input
 drawable bg_primary_button
 drawable bg_soft_blue
 drawable bg_warning_button
+drawable ic_launcher_background
 id btnAlarm
 id btnOstrzezenie
 id buttonBack
@@ -21,4 +22,7 @@ layout activity_admin
 layout activity_history
 layout activity_main
 layout activity_user
+mipmap ic_launcher
+mipmap ic_launcher_foreground
+mipmap ic_launcher_round
 style AppTheme

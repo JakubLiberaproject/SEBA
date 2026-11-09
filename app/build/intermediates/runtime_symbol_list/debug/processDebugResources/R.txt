@@ -4,6 +4,7 @@ int drawable bg_input 0x7f010002
 int drawable bg_primary_button 0x7f010003
 int drawable bg_soft_blue 0x7f010004
 int drawable bg_warning_button 0x7f010005
+int drawable ic_launcher_background 0x7f010006
 int id btnAlarm 0x7f020000
 int id btnOstrzezenie 0x7f020001
 int id buttonBack 0x7f020002
@@ -19,4 +20,7 @@ int layout activity_admin 0x7f030000
 int layout activity_history 0x7f030001
 int layout activity_main 0x7f030002
 int layout activity_user 0x7f030003
-int style AppTheme 0x7f040000
+int mipmap ic_launcher 0x7f040000
+int mipmap ic_launcher_foreground 0x7f040001
+int mipmap ic_launcher_round 0x7f040002
+int style AppTheme 0x7f050000
