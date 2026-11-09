@@ -18,10 +18,26 @@ public class AdminActivity extends Activity {
         TextView alarm = findViewById(R.id.btnAlarm);
         TextView warning = findViewById(R.id.btnOstrzezenie);
 
-        alarm.setOnClickListener(v -> showMessageDialog("ALARM"));
+        // ALARM pyta teraz tylko o potwierdzenie (bez wpisywania)
+        alarm.setOnClickListener(v -> confirmAlarmSending("ALARM"));
+
+        // OSTRZEŻENIE zostaje po staremu (z polem tekstowym)
         warning.setOnClickListener(v -> showMessageDialog("OSTRZEŻENIE"));
 
         findViewById(R.id.buttonLogout).setOnClickListener(v -> finish());
+    }
+
+    private void confirmAlarmSending(String type) {
+        new AlertDialog.Builder(this)
+                .setTitle("Potwierdzenie")
+                .setMessage("Czy na pewno chcesz uruchomić " + type + "?")
+                .setNegativeButton("Anuluj", (dialog, which) -> dialog.dismiss())
+                .setPositiveButton("Tak", (dialog, which) -> {
+                    MessageStore.add(type, "");
+                    Toast.makeText(this, type + " zapisany w wersji demo.",
+                            Toast.LENGTH_LONG).show();
+                })
+                .show();
     }
 
     private void showMessageDialog(String type) {
@@ -34,8 +50,6 @@ public class AdminActivity extends Activity {
         int padding = (int) (12 * getResources().getDisplayMetrics().density);
         input.setPadding(padding, padding, padding, padding);
 
-        // Przechwytujemy kliknięcie Dalej, aby nie zamykać okna przy pustej treści.
-        // Osobna metoda poniżej jest wywoływana po zatwierdzeniu tekstu.
         AlertDialog dialog = new AlertDialog.Builder(this)
                 .setTitle("Nowy komunikat: " + type)
                 .setView(input)

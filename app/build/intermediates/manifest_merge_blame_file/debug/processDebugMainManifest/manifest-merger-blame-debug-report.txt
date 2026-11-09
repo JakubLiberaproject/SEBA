@@ -9,51 +9,51 @@
 9        android:targetSdkVersion="35" />
 10
 11    <application
-11-->C:\Users\Admin\Downloads\SEBA_Android_Szkic\app\src\main\AndroidManifest.xml:2:5-16:19
+11-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:2:5-16:19
 12        android:allowBackup="true"
-12-->C:\Users\Admin\Downloads\SEBA_Android_Szkic\app\src\main\AndroidManifest.xml:3:9-35
+12-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:3:9-35
 13        android:debuggable="true"
 14        android:extractNativeLibs="false"
 15        android:label="SEBA"
-15-->C:\Users\Admin\Downloads\SEBA_Android_Szkic\app\src\main\AndroidManifest.xml:4:9-29
+15-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:4:9-29
 16        android:supportsRtl="true"
-16-->C:\Users\Admin\Downloads\SEBA_Android_Szkic\app\src\main\AndroidManifest.xml:6:9-35
+16-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:6:9-35
 17        android:testOnly="true"
 18        android:theme="@style/AppTheme" >
-18-->C:\Users\Admin\Downloads\SEBA_Android_Szkic\app\src\main\AndroidManifest.xml:5:9-40
+18-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:5:9-40
 19        <activity
-19-->C:\Users\Admin\Downloads\SEBA_Android_Szkic\app\src\main\AndroidManifest.xml:7:9-78
+19-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:7:9-78
 20            android:name="com.example.seba.HistoryActivity"
-20-->C:\Users\Admin\Downloads\SEBA_Android_Szkic\app\src\main\AndroidManifest.xml:7:19-50
+20-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:7:19-50
 21            android:exported="false" />
-21-->C:\Users\Admin\Downloads\SEBA_Android_Szkic\app\src\main\AndroidManifest.xml:7:51-75
+21-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:7:51-75
 22        <activity
-22-->C:\Users\Admin\Downloads\SEBA_Android_Szkic\app\src\main\AndroidManifest.xml:8:9-75
+22-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:8:9-75
 23            android:name="com.example.seba.UserActivity"
-23-->C:\Users\Admin\Downloads\SEBA_Android_Szkic\app\src\main\AndroidManifest.xml:8:19-47
+23-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:8:19-47
 24            android:exported="false" />
-24-->C:\Users\Admin\Downloads\SEBA_Android_Szkic\app\src\main\AndroidManifest.xml:8:48-72
+24-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:8:48-72
 25        <activity
-25-->C:\Users\Admin\Downloads\SEBA_Android_Szkic\app\src\main\AndroidManifest.xml:9:9-76
+25-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:9:9-76
 26            android:name="com.example.seba.AdminActivity"
-26-->C:\Users\Admin\Downloads\SEBA_Android_Szkic\app\src\main\AndroidManifest.xml:9:19-48
+26-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:9:19-48
 27            android:exported="false" />
-27-->C:\Users\Admin\Downloads\SEBA_Android_Szkic\app\src\main\AndroidManifest.xml:9:49-73
+27-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:9:49-73
 28        <activity
-28-->C:\Users\Admin\Downloads\SEBA_Android_Szkic\app\src\main\AndroidManifest.xml:10:9-15:20
+28-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:10:9-15:20
 29            android:name="com.example.seba.MainActivity"
-29-->C:\Users\Admin\Downloads\SEBA_Android_Szkic\app\src\main\AndroidManifest.xml:10:19-47
+29-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:10:19-47
 30            android:exported="true" >
-30-->C:\Users\Admin\Downloads\SEBA_Android_Szkic\app\src\main\AndroidManifest.xml:10:48-71
+30-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:10:48-71
 31            <intent-filter>
-31-->C:\Users\Admin\Downloads\SEBA_Android_Szkic\app\src\main\AndroidManifest.xml:11:13-14:29
+31-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:11:13-14:29
 32                <action android:name="android.intent.action.MAIN" />
-32-->C:\Users\Admin\Downloads\SEBA_Android_Szkic\app\src\main\AndroidManifest.xml:12:17-69
-32-->C:\Users\Admin\Downloads\SEBA_Android_Szkic\app\src\main\AndroidManifest.xml:12:25-66
+32-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:12:17-69
+32-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:12:25-66
 33
 34                <category android:name="android.intent.category.LAUNCHER" />
-34-->C:\Users\Admin\Downloads\SEBA_Android_Szkic\app\src\main\AndroidManifest.xml:13:17-77
-34-->C:\Users\Admin\Downloads\SEBA_Android_Szkic\app\src\main\AndroidManifest.xml:13:27-74
+34-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:13:17-77
+34-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:13:27-74
 35            </intent-filter>
 36        </activity>
 37    </application>
