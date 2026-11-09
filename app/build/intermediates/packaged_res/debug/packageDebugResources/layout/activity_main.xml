@@ -1,0 +1,46 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fillViewport="true" android:background="#F3F6FB">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:gravity="center_horizontal" android:padding="26dp">
+        <Space android:layout_width="1dp" android:layout_height="54dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="SEBA" android:textColor="#10233F" android:textSize="38sp" android:textStyle="bold"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="SYSTEM POWIADAMIANIA" android:textColor="#718096" android:textSize="12sp"
+            android:letterSpacing="0.12" android:layout_marginTop="5dp"/>
+        <Space android:layout_width="1dp" android:layout_height="44dp"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="22dp" android:background="@drawable/bg_card">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Logowanie" android:textColor="#10233F" android:textSize="24sp" android:textStyle="bold"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Zaloguj się, aby przejść do aplikacji." android:textColor="#718096"
+                android:textSize="14sp" android:layout_marginTop="5dp" android:layout_marginBottom="22dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="LOGIN" android:textColor="#344054" android:textSize="12sp" android:textStyle="bold"/>
+            <EditText android:id="@+id/editLogin" android:layout_width="match_parent" android:layout_height="52dp"
+                android:singleLine="true" android:hint="Wpisz login" android:paddingHorizontal="14dp"
+                android:layout_marginTop="7dp" android:background="@drawable/bg_input" android:textColor="#10233F"
+                android:textColorHint="#98A2B3" android:inputType="text"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="HASŁO" android:textColor="#344054" android:textSize="12sp" android:textStyle="bold"
+                android:layout_marginTop="18dp"/>
+            <EditText android:id="@+id/editPassword" android:layout_width="match_parent" android:layout_height="52dp"
+                android:singleLine="true" android:hint="Wpisz hasło" android:paddingHorizontal="14dp"
+                android:layout_marginTop="7dp" android:background="@drawable/bg_input" android:textColor="#10233F"
+                android:textColorHint="#98A2B3" android:inputType="textPassword"/>
+            <TextView android:id="@+id/textError" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:textColor="#B42318" android:textSize="13sp" android:visibility="gone"
+                android:layout_marginTop="12dp"/>
+            <TextView android:id="@+id/buttonLogin" android:layout_width="match_parent" android:layout_height="54dp"
+                android:gravity="center" android:text="ZALOGUJ SIĘ" android:textColor="#FFFFFF"
+                android:textStyle="bold" android:textSize="15sp" android:background="@drawable/bg_primary_button"
+                android:layout_marginTop="22dp"/>
+        </LinearLayout>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="TRYB DEMO: admin / admin  •  uczen / uczen"
+            android:textColor="#98A2B3" android:textSize="12sp" android:gravity="center"
+            android:layout_marginTop="18dp"/>
+    </LinearLayout>
+</ScrollView>
