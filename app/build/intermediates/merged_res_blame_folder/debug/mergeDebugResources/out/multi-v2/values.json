@@ -4,7 +4,7 @@
             "outputFile": "com.example.seba.app-mergeDebugResources-2:/values/values.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Admin\\Downloads\\SEBA_Android_Szkic\\app\\src\\main\\res\\values\\styles.xml",
+                    "source": "C:\\Users\\jakub\\Desktop\\SEBA\\app\\src\\main\\res\\values\\styles.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",
