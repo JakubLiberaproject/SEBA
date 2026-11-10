@@ -1,13 +1,41 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    android:orientation="vertical" android:padding="24dp" android:background="#F3F6FB">
+    android:orientation="vertical" android:paddingHorizontal="20dp"
+    android:paddingBottom="20dp" android:paddingTop="48dp"
+    android:background="#F3F6FB" android:fitsSystemWindows="true">
+
     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="Historia komunikatów" android:textSize="25sp" android:textStyle="bold"
+        android:text="Historia komunikatów" android:textSize="24sp" android:textStyle="bold"
         android:textColor="#10233F"/>
-    <TextView android:id="@+id/textHistory" android:layout_width="match_parent" android:layout_height="0dp"
-        android:layout_weight="1" android:text="Brak zapisanych komunikatów."
-        android:textSize="15sp" android:textColor="#344054" android:paddingTop="20dp"/>
-    <TextView android:id="@+id/buttonBack" android:layout_width="match_parent" android:layout_height="54dp"
+
+    <!-- Tab Selector -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:layout_marginTop="16dp" android:layout_marginBottom="14dp">
+
+        <TextView android:id="@+id/tabAll" android:layout_width="0dp" android:layout_height="44dp"
+            android:layout_weight="1" android:gravity="center" android:text="WSZYSTKIE"
+            android:textSize="12sp" android:textStyle="bold" android:textColor="#FFFFFF"
+            android:background="@drawable/bg_primary_button" android:layout_marginEnd="4dp"/>
+
+        <TextView android:id="@+id/tabAlarms" android:layout_width="0dp" android:layout_height="44dp"
+            android:layout_weight="1" android:gravity="center" android:text="ALARMY"
+            android:textSize="12sp" android:textStyle="bold" android:textColor="#344054"
+            android:background="@drawable/bg_tab_inactive" android:layout_marginHorizontal="2dp"/>
+
+        <TextView android:id="@+id/tabWarnings" android:layout_width="0dp" android:layout_height="44dp"
+            android:layout_weight="1" android:gravity="center" android:text="OSTRZEŻENIA"
+            android:textSize="12sp" android:textStyle="bold" android:textColor="#344054"
+            android:background="@drawable/bg_tab_inactive" android:layout_marginStart="4dp"/>
+    </LinearLayout>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:fillViewport="true">
+        <LinearLayout android:id="@+id/containerHistory" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical"/>
+    </ScrollView>
+
+    <TextView android:id="@+id/buttonBack" android:layout_width="match_parent" android:layout_height="52dp"
         android:gravity="center" android:text="WRÓĆ" android:textColor="#FFFFFF"
-        android:textStyle="bold" android:background="@drawable/bg_primary_button"/>
+        android:textStyle="bold" android:background="@drawable/bg_primary_button"
+        android:layout_marginTop="14dp"/>
 </LinearLayout>

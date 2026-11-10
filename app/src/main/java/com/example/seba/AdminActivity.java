@@ -2,13 +2,18 @@ package com.example.seba;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class AdminActivity extends Activity {
+
+    private TextView btnCancelAlarm;
+    private TextView btnCancelWarning;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,14 +22,44 @@ public class AdminActivity extends Activity {
 
         TextView alarm = findViewById(R.id.btnAlarm);
         TextView warning = findViewById(R.id.btnOstrzezenie);
+        btnCancelAlarm = findViewById(R.id.btnCancelAlarm);
+        btnCancelWarning = findViewById(R.id.btnCancelWarning);
 
-        // ALARM pyta teraz tylko o potwierdzenie (bez wpisywania)
         alarm.setOnClickListener(v -> confirmAlarmSending("ALARM"));
-
-        // OSTRZEŻENIE zostaje po staremu (z polem tekstowym)
         warning.setOnClickListener(v -> showMessageDialog("OSTRZEŻENIE"));
 
+        if (btnCancelAlarm != null) {
+            btnCancelAlarm.setOnClickListener(v -> confirmCancelAlarm());
+        }
+
+        if (btnCancelWarning != null) {
+            btnCancelWarning.setOnClickListener(v -> confirmCancelWarning());
+        }
+
+        View buttonHistory = findViewById(R.id.buttonHistory);
+        if (buttonHistory != null) {
+            buttonHistory.setOnClickListener(v ->
+                    startActivity(new Intent(this, HistoryActivity.class)));
+        }
+
         findViewById(R.id.buttonLogout).setOnClickListener(v -> finish());
+
+        updateCancelButtonsVisibility();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        updateCancelButtonsVisibility();
+    }
+
+    private void updateCancelButtonsVisibility() {
+        if (btnCancelAlarm != null) {
+            btnCancelAlarm.setVisibility(MessageStore.getActiveAlarm() != null ? View.VISIBLE : View.GONE);
+        }
+        if (btnCancelWarning != null) {
+            btnCancelWarning.setVisibility(MessageStore.getActiveWarning() != null ? View.VISIBLE : View.GONE);
+        }
     }
 
     private void confirmAlarmSending(String type) {
@@ -34,8 +69,44 @@ public class AdminActivity extends Activity {
                 .setNegativeButton("Anuluj", (dialog, which) -> dialog.dismiss())
                 .setPositiveButton("Tak", (dialog, which) -> {
                     MessageStore.add(type, "");
-                    Toast.makeText(this, type + " zapisany w wersji demo.",
+                    NotificationHelper.sendNotification(this, type, "Uruchomiono alarm ewakuacyjny!");
+                    updateCancelButtonsVisibility();
+                    Toast.makeText(this, type + " został uruchomiony.",
                             Toast.LENGTH_LONG).show();
+                })
+                .show();
+    }
+
+    private void confirmCancelAlarm() {
+        new AlertDialog.Builder(this)
+                .setTitle("Potwierdzenie odwołania")
+                .setMessage("Czy na pewno chcesz odwołać ALARM?")
+                .setNegativeButton("Anuluj", (dialog, which) -> dialog.dismiss())
+                .setPositiveButton("Tak, odwołaj", (dialog, which) -> {
+                    boolean canceled = MessageStore.cancelActiveAlarm();
+                    updateCancelButtonsVisibility();
+                    if (canceled) {
+                        Toast.makeText(this, "Alarm został odwołany.", Toast.LENGTH_LONG).show();
+                    } else {
+                        Toast.makeText(this, "Brak aktywnego alarmu do odwołania.", Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .show();
+    }
+
+    private void confirmCancelWarning() {
+        new AlertDialog.Builder(this)
+                .setTitle("Potwierdzenie odwołania")
+                .setMessage("Czy na pewno chcesz odwołać OSTRZEŻENIE?")
+                .setNegativeButton("Anuluj", (dialog, which) -> dialog.dismiss())
+                .setPositiveButton("Tak, odwołaj", (dialog, which) -> {
+                    boolean canceled = MessageStore.cancelActiveWarning();
+                    updateCancelButtonsVisibility();
+                    if (canceled) {
+                        Toast.makeText(this, "Ostrzeżenie zostało odwołane.", Toast.LENGTH_LONG).show();
+                    } else {
+                        Toast.makeText(this, "Brak aktywnego ostrzeżenia do odwołania.", Toast.LENGTH_SHORT).show();
+                    }
                 })
                 .show();
     }
@@ -76,7 +147,9 @@ public class AdminActivity extends Activity {
                 .setNegativeButton("Anuluj", (dialog, which) -> dialog.dismiss())
                 .setPositiveButton("Wyślij", (dialog, which) -> {
                     MessageStore.add(type, content);
-                    Toast.makeText(this, type + " zapisany w wersji demo.",
+                    NotificationHelper.sendNotification(this, type, content);
+                    updateCancelButtonsVisibility();
+                    Toast.makeText(this, type + " został wysłany.",
                             Toast.LENGTH_LONG).show();
                 })
                 .show();

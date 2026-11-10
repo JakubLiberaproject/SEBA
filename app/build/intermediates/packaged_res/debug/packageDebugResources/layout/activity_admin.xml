@@ -1,8 +1,10 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="#F3F6FB" android:fillViewport="true">
+    android:background="#F3F6FB" android:fillViewport="true"
+    android:fitsSystemWindows="true">
     <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
-        android:orientation="vertical" android:padding="24dp">
+        android:orientation="vertical" android:paddingHorizontal="24dp"
+        android:paddingBottom="24dp" android:paddingTop="48dp">
         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
             android:text="SEBA" android:textSize="30sp" android:textStyle="bold" android:textColor="#10233F"/>
         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
@@ -10,7 +12,7 @@
             android:layout_marginTop="3dp"/>
         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
             android:text="Wybierz rodzaj komunikatu" android:textSize="21sp" android:textStyle="bold"
-            android:textColor="#10233F" android:layout_marginTop="42dp" android:layout_marginBottom="18dp"/>
+            android:textColor="#10233F" android:layout_marginTop="32dp" android:layout_marginBottom="18dp"/>
         <TextView android:id="@+id/btnAlarm" android:layout_width="match_parent" android:layout_height="100dp"
             android:gravity="center" android:text="ALARM" android:textSize="24sp" android:textStyle="bold"
             android:textColor="#FFFFFF" android:background="@drawable/bg_alarm_button"/>
@@ -18,8 +20,20 @@
             android:gravity="center" android:text="OSTRZEŻENIE" android:textSize="23sp" android:textStyle="bold"
             android:textColor="#FFFFFF" android:background="@drawable/bg_warning_button"
             android:layout_marginTop="18dp"/>
+        <TextView android:id="@+id/btnCancelAlarm" android:layout_width="match_parent" android:layout_height="60dp"
+            android:gravity="center" android:text="ODWOŁAJ ALARM" android:textSize="18sp" android:textStyle="bold"
+            android:textColor="#FFFFFF" android:background="@drawable/bg_alarm_button"
+            android:layout_marginTop="18dp" android:visibility="gone"/>
+        <TextView android:id="@+id/btnCancelWarning" android:layout_width="match_parent" android:layout_height="60dp"
+            android:gravity="center" android:text="ODWOŁAJ OSTRZEŻENIE" android:textSize="18sp" android:textStyle="bold"
+            android:textColor="#FFFFFF" android:background="@drawable/bg_warning_button"
+            android:layout_marginTop="12dp" android:visibility="gone"/>
+        <TextView android:id="@+id/buttonHistory" android:layout_width="match_parent" android:layout_height="56dp"
+            android:gravity="center" android:text="HISTORIA KOMUNIKATÓW" android:textColor="#FFFFFF"
+            android:textStyle="bold" android:background="@drawable/bg_primary_button"
+            android:layout_marginTop="22dp"/>
         <TextView android:id="@+id/buttonLogout" android:layout_width="match_parent" android:layout_height="52dp"
             android:gravity="center" android:text="WYLOGUJ" android:textColor="#526174"
-            android:textStyle="bold" android:layout_marginTop="34dp"/>
+            android:textStyle="bold" android:layout_marginTop="10dp"/>
     </LinearLayout>
 </ScrollView>

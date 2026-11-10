@@ -8,54 +8,67 @@
 8        android:minSdkVersion="23"
 9        android:targetSdkVersion="35" />
 10
-11    <application
-11-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:2:5-16:19
-12        android:allowBackup="true"
-12-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:3:9-35
-13        android:debuggable="true"
-14        android:extractNativeLibs="false"
-15        android:label="SEBA"
-15-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:4:9-29
-16        android:supportsRtl="true"
-16-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:6:9-35
-17        android:testOnly="true"
-18        android:theme="@style/AppTheme" >
-18-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:5:9-40
-19        <activity
-19-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:7:9-78
-20            android:name="com.example.seba.HistoryActivity"
-20-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:7:19-50
-21            android:exported="false" />
-21-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:7:51-75
-22        <activity
-22-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:8:9-75
-23            android:name="com.example.seba.UserActivity"
-23-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:8:19-47
-24            android:exported="false" />
-24-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:8:48-72
-25        <activity
-25-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:9:9-76
-26            android:name="com.example.seba.AdminActivity"
-26-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:9:19-48
-27            android:exported="false" />
-27-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:9:49-73
-28        <activity
-28-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:10:9-15:20
-29            android:name="com.example.seba.MainActivity"
-29-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:10:19-47
-30            android:exported="true" >
-30-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:10:48-71
-31            <intent-filter>
-31-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:11:13-14:29
-32                <action android:name="android.intent.action.MAIN" />
-32-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:12:17-69
-32-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:12:25-66
-33
-34                <category android:name="android.intent.category.LAUNCHER" />
-34-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:13:17-77
-34-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:13:27-74
-35            </intent-filter>
-36        </activity>
-37    </application>
+11    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+11-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:3:5-77
+11-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:3:22-74
+12    <uses-permission android:name="android.permission.VIBRATE" />
+12-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:4:5-66
+12-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:4:22-63
+13    <uses-permission android:name="android.permission.WAKE_LOCK" />
+13-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:5:5-68
+13-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:5:22-65
+14    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+14-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:6:5-80
+14-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:6:22-77
+15
+16    <application
+16-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:8:5-22:19
+17        android:allowBackup="true"
+17-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:9:9-35
+18        android:debuggable="true"
+19        android:extractNativeLibs="false"
+20        android:label="SEBA"
+20-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:10:9-29
+21        android:supportsRtl="true"
+21-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:12:9-35
+22        android:testOnly="true"
+23        android:theme="@style/AppTheme" >
+23-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:11:9-40
+24        <activity
+24-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:13:9-78
+25            android:name="com.example.seba.HistoryActivity"
+25-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:13:19-50
+26            android:exported="false" />
+26-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:13:51-75
+27        <activity
+27-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:14:9-75
+28            android:name="com.example.seba.UserActivity"
+28-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:14:19-47
+29            android:exported="false" />
+29-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:14:48-72
+30        <activity
+30-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:15:9-76
+31            android:name="com.example.seba.AdminActivity"
+31-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:15:19-48
+32            android:exported="false" />
+32-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:15:49-73
+33        <activity
+33-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:16:9-21:20
+34            android:name="com.example.seba.MainActivity"
+34-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:16:19-47
+35            android:exported="true" >
+35-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:16:48-71
+36            <intent-filter>
+36-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:17:13-20:29
+37                <action android:name="android.intent.action.MAIN" />
+37-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:18:17-69
+37-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:18:25-66
 38
-39</manifest>
+39                <category android:name="android.intent.category.LAUNCHER" />
+39-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:19:17-77
+39-->C:\Users\jakub\Desktop\SEBA\app\src\main\AndroidManifest.xml:19:27-74
+40            </intent-filter>
+41        </activity>
+42    </application>
+43
+44</manifest>

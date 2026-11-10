@@ -2,6 +2,8 @@ package com.example.seba;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -21,6 +23,14 @@ public class MainActivity extends Activity {
         textError = findViewById(R.id.textError);
 
         findViewById(R.id.buttonLogin).setOnClickListener(v -> login());
+
+        NotificationHelper.createNotificationChannels(this);
+
+        if (Build.VERSION.SDK_INT >= 33) {
+            if (checkSelfPermission("android.permission.POST_NOTIFICATIONS") != PackageManager.PERMISSION_GRANTED) {
+                requestPermissions(new String[]{"android.permission.POST_NOTIFICATIONS"}, 101);
+            }
+        }
     }
 
     private void login() {

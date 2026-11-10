@@ -1,4 +1,4 @@
-#Mon Nov 09 13:49:28 CET 2026
+#Tue Nov 10 10:17:39 CET 2026
 base.0=C\:\\Users\\jakub\\Desktop\\SEBA\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.1=C\:\\Users\\jakub\\Desktop\\SEBA\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\15\\classes.dex
 path.0=0/classes.dex
